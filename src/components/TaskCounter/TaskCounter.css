@@ -1,0 +1,11 @@
+.counters {
+  display: flex;
+  gap: 16px;
+}
+
+.counter {
+  margin-bottom: 24px;
+  background: #3d444b;
+  padding: 8px;
+  border-radius: 0 0 12px 12px;
+}

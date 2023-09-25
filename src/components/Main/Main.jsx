@@ -1,10 +1,11 @@
 import React from "react";
 import ToDoList from "../ToDoList/ToDoList";
+import "./Main.css";
 
-const Main = () => {
+const Main = (props) => {
   return (
     <main>
-      <ToDoList />
+      <ToDoList {...props} /> {/* передача пропсов через компонент  */}
     </main>
   );
 };

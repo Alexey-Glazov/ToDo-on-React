@@ -1,0 +1,120 @@
+.task {
+  display: grid;
+  grid-template-areas:
+    "task_header task_header task_header"
+    "task_status task_text task_text"
+    "task_buttons task_buttons task_buttons";
+  grid-template-columns: 10% 45% 45%;
+  border: 2px solid #3d444b;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.task_header {
+  grid-area: task_header;
+  display: flex;
+  padding: 4px 64px;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.status_block {
+  grid-area: task_status;
+  background-color: #3d444b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 12px 0 0 0;
+}
+
+.taskText {
+  background-color: #282e33;
+  grid-area: task_text;
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  border-radius: 0 12px 0 0;
+}
+
+.buttons {
+  grid-area: task_buttons;
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 0;
+  background-color: #282e33;
+}
+
+.created {
+  background-color: #e44c2683;
+  backdrop-filter: blur(10px);
+}
+
+.in_progress {
+  background-color: #5c42c485;
+  backdrop-filter: blur(10px);
+}
+
+.done {
+  background-color: #04842f81;
+  backdrop-filter: blur(10px);
+}
+
+.in_progress-border {
+  border-color: #5c42c485;
+  backdrop-filter: blur(10px);
+}
+
+.created-border {
+  border-color: #e44c2683;
+  backdrop-filter: blur(10px);
+}
+
+.in_progress-border {
+  border-color: #5c42c485;
+  backdrop-filter: blur(10px);
+}
+
+.done-border {
+  border-color: #04842f81;
+  backdrop-filter: blur(10px);
+}
+
+.button {
+  background-color: #f7f7f700;
+  max-width: fit-content;
+  border-radius: 10px;
+  padding: 8px 16px;
+  outline: none;
+  border: none;
+}
+
+.task_delete {
+  transition: all 0.4s ease-in-out;
+  border: 2px solid #e44c2683;
+  backdrop-filter: blur(10px);
+}
+
+.task_delete:hover {
+  background-color: #e44c2683;
+}
+
+.status_in_progress {
+  transition: all 0.4s ease-in-out;
+  border: 2px solid #5c42c485;
+  backdrop-filter: blur(10px);
+}
+
+.status_in_progress:hover {
+  background-color: #5c42c485;
+}
+
+.status_done {
+  transition: all 0.4s ease-in-out;
+  border: 2px solid #04842f81;
+  backdrop-filter: blur(10px);
+}
+
+.status_done:hover {
+  background-color: #04842f81;
+}

@@ -2,16 +2,19 @@ import React, { useRef, useState } from "react";
 import "./TaskInput.css";
 
 const TaskInput = (props) => {
-  //console.log(props);
   const formRef = useRef();
   const dateRef = useRef();
+  const taskHeadRef = useRef();
   const taskRef = useRef();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const task = {
+      taskHead: taskHeadRef.current.value,
       taskText: taskRef.current.value,
       date: dateRef.current.value,
+      id: crypto.randomUUID(),
+      status: "created",
     };
 
     if (!task.taskText || !task.date) {
@@ -26,6 +29,12 @@ const TaskInput = (props) => {
     <form className="input_task" onSubmit={handleSubmit} ref={formRef}>
       <h3 className="form_header">Введите задачу</h3>
       <input className="date input" type="date" ref={dateRef} />
+      <input
+        className="task_text input"
+        type="text"
+        placeholder="название задачи"
+        ref={taskHeadRef}
+      />
       <input
         className="task_text input"
         type="text"

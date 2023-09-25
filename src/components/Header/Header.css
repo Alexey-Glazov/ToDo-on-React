@@ -1,7 +1,18 @@
 .header {
-  margin: 30px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #282e33b2;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 25px #282e33b2;
+  border-radius: 0 0 12px 12px;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
 }
 
 .page_heading {
-  font-size: 82px;
+  margin: 0;
+  font-size: 40px;
 }
